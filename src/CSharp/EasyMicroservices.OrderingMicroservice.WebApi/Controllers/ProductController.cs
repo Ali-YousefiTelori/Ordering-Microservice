@@ -1,6 +1,7 @@
 ﻿using EasyMicroservices.ContentsMicroservice.Clients.Helpers;
 using EasyMicroservices.Cores.AspCoreApi;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
+using EasyMicroservices.Cores.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Contracts.Common;
 using EasyMicroservices.OrderingMicroservice.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Database.Entities;
@@ -13,8 +14,10 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
     {
         private readonly IConfiguration _config;
         private readonly ContentLanguageHelper _contentHelper;
+        readonly IUnitOfWork _unitOfWork;
         public ProductController(IUnitOfWork unitOfWork, IConfiguration config) : base(unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             _config = config;
             _contentHelper = new(new Contents.GeneratedServices.ContentClient(_config.GetValue<string>("RootAddresses:Content"), new HttpClient()));
         }
@@ -49,14 +52,27 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ListMessageContract<ProductContract>> GetAllByLanguage(GetByLanguageRequestContract getByLanguage, CancellationToken cancellationToken = default)
+        public async Task<ListMessageContract<ProductContract>> GetAllByLanguage(GetByLanguageRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.GetAll(cancellationToken);
             if (result)
             {
-                await _contentHelper.ResolveContentLanguage(result.Result, getByLanguage.Language);
+                await _contentHelper.ResolveContentLanguage(result.Result, request.Language);
             }
             return result;
+        }
+
+        [HttpPost]
+        public async Task<MessageContract<ProductLanguageContract>> GetByLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
+        {
+            var result = await base.GetById(request.Id, cancellationToken);
+            if (result)
+            {
+                var mapped = _unitOfWork.GetMapper().Map<ProductLanguageContract>(result.Result);
+                await _contentHelper.ResolveContentAllLanguage(mapped);
+                return mapped;
+            }
+            return result.ToContract<ProductLanguageContract>();
         }
     }
 }
