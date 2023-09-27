@@ -6,10 +6,10 @@ using EasyMicroservices.OrderingMicroservice.Database.Entities;
 
 namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
 {
-    public class OrderController : SimpleQueryServiceController<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract, long>
+    public class ProductController : SimpleQueryServiceController<ProductEntity, CreateProductRequestContract, UpdateProductRequestContract, ProductContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public OrderController(IUnitOfWork unitOfWork) : base(unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
