@@ -1,6 +1,8 @@
 ﻿using EasyMicroservices.ContentsMicroservice.Clients.Helpers;
 using EasyMicroservices.Cores.AspCoreApi;
+using EasyMicroservices.Cores.AspEntityFrameworkCoreApi;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
+using EasyMicroservices.Cores.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Contracts.Common;
 using EasyMicroservices.OrderingMicroservice.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Database.Entities;
@@ -13,8 +15,10 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
     {
         private readonly IConfiguration _config;
         private readonly ContentLanguageHelper _contentHelper;
+        readonly IUnitOfWork _unitOfWork;
         public OrderController(IUnitOfWork unitOfWork, IConfiguration config) : base(unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             _config = config;
             _contentHelper = new(new Contents.GeneratedServices.ContentClient(_config.GetValue<string>("RootAddresses:Content"), new HttpClient()));
         }
@@ -57,5 +61,19 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
             }
             return result;
         }
+
+        [HttpPost]
+        public async Task<MessageContract<OrderLanguageContract>> GetByLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
+        {
+            var result = await base.GetById(request.Id, cancellationToken);
+            if (result)
+            {
+                var mapped = _unitOfWork.GetMapper().Map<OrderLanguageContract>(result.Result);
+                await _contentHelper.ResolveContentAllLanguage(mapped);
+                return mapped;
+            }
+            return result.ToContract<OrderLanguageContract>();
+        }
+
     }
 }
