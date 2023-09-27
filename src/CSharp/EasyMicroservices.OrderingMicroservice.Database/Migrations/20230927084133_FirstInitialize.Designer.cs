@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EasyMicroservices.OrderingMicroservice.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20230925073555_FirstInitialize")]
+    [Migration("20230927084133_FirstInitialize")]
     partial class FirstInitialize
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace EasyMicroservices.OrderingMicroservice.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.10")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -58,9 +58,6 @@ namespace EasyMicroservices.OrderingMicroservice.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("ParentId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("ProductId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("UniqueIdentity")
