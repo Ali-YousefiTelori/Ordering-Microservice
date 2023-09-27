@@ -152,12 +152,12 @@
         }
       }
     },
-    "/api/Order/GetByLanguage": {
+    "/api/Order/GetByIdAllLanguage": {
       "post": {
         "tags": [
           "Order"
         ],
-        "operationId": "GetByLanguage",
+        "operationId": "GetByIdAllLanguage",
         "requestBody": {
           "content": {
             "application/json": {
@@ -868,12 +868,12 @@
         }
       }
     },
-    "/api/Product/GetByLanguage": {
+    "/api/Product/GetByIdAllLanguage": {
       "post": {
         "tags": [
           "Product"
         ],
-        "operationId": "GetByLanguage2",
+        "operationId": "GetByIdAllLanguage2",
         "requestBody": {
           "content": {
             "application/json": {
