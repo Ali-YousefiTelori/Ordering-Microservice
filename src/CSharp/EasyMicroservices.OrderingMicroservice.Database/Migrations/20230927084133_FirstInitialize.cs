@@ -17,7 +17,6 @@ namespace EasyMicroservices.OrderingMicroservice.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductId = table.Column<long>(type: "bigint", nullable: true),
                     ParentId = table.Column<long>(type: "bigint", nullable: true),
                     CreationDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModificationDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
