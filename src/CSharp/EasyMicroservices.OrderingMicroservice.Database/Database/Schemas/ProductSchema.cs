@@ -5,8 +5,6 @@ namespace EasyMicroservices.OrderingMicroservice.Database.Schemas
 {
     public class ProductSchema : FullAbilitySchema
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
         public decimal Amount { get; set; }
         public CurrencyCodeType CurrencyCode { get; set; }
     }

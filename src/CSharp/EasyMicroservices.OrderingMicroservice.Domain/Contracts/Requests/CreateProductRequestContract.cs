@@ -1,5 +1,7 @@
-﻿using EasyMicroservices.Cores.Interfaces;
+﻿using EasyMicroservices.ContentsMicroservice.Clients.Attributes;
+using EasyMicroservices.Cores.Interfaces;
 using EasyMicroservices.Domain.DataTypes;
+using EasyMicroservices.OrderingMicroservice.Contracts.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +12,10 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Requests
 {
     public class CreateProductRequestContract : IUniqueIdentitySchema
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        [ContentLanguage]
+        public List<LanguageDataContract> Names { get; set; }
+        [ContentLanguage]
+        public List<LanguageDataContract> Descriptions { get; set; }
         public decimal Amount { get; set; }
         public CurrencyCodeType CurrencyCode { get; set; }
         public string UniqueIdentity { get; set; }
