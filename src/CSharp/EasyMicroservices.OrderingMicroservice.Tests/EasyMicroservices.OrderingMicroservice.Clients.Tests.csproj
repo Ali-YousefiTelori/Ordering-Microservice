@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyMicroservices.OrderingMicroservice.Clients\EasyMicroservices.Ordering.Clients.csproj" />
+    <ProjectReference Include="..\EasyMicroservices.OrderingMicroservice.Clients\EasyMicroservices.OrderingMicroservice.Clients.csproj" />
   </ItemGroup>
 
 </Project>
