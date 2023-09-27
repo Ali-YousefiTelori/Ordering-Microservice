@@ -63,7 +63,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<MessageContract<ProductLanguageContract>> GetByLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
+        public async Task<MessageContract<ProductLanguageContract>> GetByIdAllLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
         {
             var result = await base.GetById(request.Id, cancellationToken);
             if (result)

@@ -289,18 +289,18 @@ namespace Ordering.GeneratedServices
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<OrderLanguageContractMessageContract> GetByLanguageAsync(Int64GetIdRequestContract body)
+        public virtual System.Threading.Tasks.Task<OrderLanguageContractMessageContract> GetByIdAllLanguageAsync(Int64GetIdRequestContract body)
         {
-            return GetByLanguageAsync(body, System.Threading.CancellationToken.None);
+            return GetByIdAllLanguageAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<OrderLanguageContractMessageContract> GetByLanguageAsync(Int64GetIdRequestContract body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<OrderLanguageContractMessageContract> GetByIdAllLanguageAsync(Int64GetIdRequestContract body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Order/GetByLanguage");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Order/GetByIdAllLanguage");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -1593,18 +1593,18 @@ namespace Ordering.GeneratedServices
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ProductLanguageContractMessageContract> GetByLanguageAsync(Int64GetIdRequestContract body)
+        public virtual System.Threading.Tasks.Task<ProductLanguageContractMessageContract> GetByIdAllLanguageAsync(Int64GetIdRequestContract body)
         {
-            return GetByLanguageAsync(body, System.Threading.CancellationToken.None);
+            return GetByIdAllLanguageAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ProductLanguageContractMessageContract> GetByLanguageAsync(Int64GetIdRequestContract body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ProductLanguageContractMessageContract> GetByIdAllLanguageAsync(Int64GetIdRequestContract body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Product/GetByLanguage");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Product/GetByIdAllLanguage");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
