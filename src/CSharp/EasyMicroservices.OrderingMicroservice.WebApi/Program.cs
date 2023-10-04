@@ -27,7 +27,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
             app.Services.AddScoped((serviceProvider) => new UnitOfWork(serviceProvider));
             app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>());
             app.Services.AddTransient(serviceProvider => new OrderContext(serviceProvider.GetService<IEntityFrameworkCoreDatabaseBuilder>()));
-            app.Services.AddScoped<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder());
+            app.Services.AddScoped<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder(serviceProvider.GetService<IConfiguration>()));
             StartUpExtensions.AddWhiteLabel("Ordering", "RootAddresses:WhiteLabel");
             return app;
         }
