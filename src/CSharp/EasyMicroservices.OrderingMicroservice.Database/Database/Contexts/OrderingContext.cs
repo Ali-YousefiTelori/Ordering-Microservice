@@ -16,6 +16,7 @@ namespace EasyMicroservices.OrderingMicroservice.Database.Contexts
         }
 
         public DbSet<OrderEntity> Orders { get; set; }
+        public DbSet<ProductEntity> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
