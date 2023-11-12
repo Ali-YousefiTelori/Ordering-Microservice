@@ -2627,58 +2627,12 @@ namespace Ordering.GeneratedServices
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
-    public partial class AmountContract : System.ComponentModel.INotifyPropertyChanged
-    {
-        private decimal _value;
-        private CurrencyCodeType _currencyCode;
-
-        [Newtonsoft.Json.JsonProperty("value", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public decimal Value
-        {
-            get { return _value; }
-
-            set
-            {
-                if (_value != value)
-                {
-                    _value = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CurrencyCodeType CurrencyCode
-        {
-            get { return _currencyCode; }
-
-            set
-            {
-                if (_currencyCode != value)
-                {
-                    _currencyCode = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class CreateOrderRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private decimal _amount;
-        private CurrencyCodeType _currencyCode;
+        private PriceContract _price;
+        private long _productId;
         private string _uniqueIdentity;
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateOrderRequestContract> _children;
@@ -2713,31 +2667,31 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public decimal Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CurrencyCodeType CurrencyCode
+        [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long ProductId
         {
-            get { return _currencyCode; }
+            get { return _productId; }
 
             set
             {
-                if (_currencyCode != value)
+                if (_productId != value)
                 {
-                    _currencyCode = value;
+                    _productId = value;
                     RaisePropertyChanged();
                 }
             }
@@ -2833,8 +2787,7 @@ namespace Ordering.GeneratedServices
     {
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private decimal _amount;
-        private CurrencyCodeType _currencyCode;
+        private PriceContract _price;
         private string _uniqueIdentity;
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
@@ -2869,31 +2822,16 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public decimal Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CurrencyCodeType CurrencyCode
-        {
-            get { return _currencyCode; }
-
-            set
-            {
-                if (_currencyCode != value)
-                {
-                    _currencyCode = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }
@@ -4228,7 +4166,10 @@ namespace Ordering.GeneratedServices
         private long _id;
         private string _name;
         private string _description;
-        private AmountContract _amount;
+        private PriceContract _price;
+        private long? _parentId;
+        private long _productId;
+        private ProductContract _product;
         private string _uniqueIdentity;
         private bool _isDeleted;
         private System.DateTimeOffset? _deletedDateTime;
@@ -4280,16 +4221,61 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AmountContract Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("parentId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? ParentId
+        {
+            get { return _parentId; }
+
+            set
+            {
+                if (_parentId != value)
+                {
+                    _parentId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long ProductId
+        {
+            get { return _productId; }
+
+            set
+            {
+                if (_productId != value)
+                {
+                    _productId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("product", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ProductContract Product
+        {
+            get { return _product; }
+
+            set
+            {
+                if (_product != value)
+                {
+                    _product = value;
                     RaisePropertyChanged();
                 }
             }
@@ -4574,7 +4560,7 @@ namespace Ordering.GeneratedServices
         private long _id;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private AmountContract _amount;
+        private PriceContract _price;
         private string _uniqueIdentity;
         private bool _isDeleted;
         private System.DateTimeOffset? _deletedDateTime;
@@ -4626,16 +4612,16 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AmountContract Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }
@@ -4805,12 +4791,59 @@ namespace Ordering.GeneratedServices
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
+    public partial class PriceContract : System.ComponentModel.INotifyPropertyChanged
+    {
+        private decimal _amount;
+        private CurrencyCodeType _currencyCode;
+
+        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public decimal Amount
+        {
+            get { return _amount; }
+
+            set
+            {
+                if (_amount != value)
+                {
+                    _amount = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public CurrencyCodeType CurrencyCode
+        {
+            get { return _currencyCode; }
+
+            set
+            {
+                if (_currencyCode != value)
+                {
+                    _currencyCode = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class ProductContract : System.ComponentModel.INotifyPropertyChanged
     {
         private long _id;
         private string _name;
         private string _description;
-        private AmountContract _amount;
+        private PriceContract _price;
+        private long? _parentId;
         private string _uniqueIdentity;
         private bool _isDeleted;
         private System.DateTimeOffset? _deletedDateTime;
@@ -4862,16 +4895,31 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AmountContract Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("parentId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? ParentId
+        {
+            get { return _parentId; }
+
+            set
+            {
+                if (_parentId != value)
+                {
+                    _parentId = value;
                     RaisePropertyChanged();
                 }
             }
@@ -5156,7 +5204,7 @@ namespace Ordering.GeneratedServices
         private long _id;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private AmountContract _amount;
+        private PriceContract _price;
         private string _uniqueIdentity;
         private bool _isDeleted;
         private System.DateTimeOffset? _deletedDateTime;
@@ -5208,16 +5256,16 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AmountContract Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }
@@ -5499,8 +5547,8 @@ namespace Ordering.GeneratedServices
     {
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private decimal _amount;
-        private CurrencyCodeType _currencyCode;
+        private PriceContract _price;
+        private long _productId;
         private string _uniqueIdentity;
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateOrderRequestContract> _children;
@@ -5536,31 +5584,31 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public decimal Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CurrencyCodeType CurrencyCode
+        [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long ProductId
         {
-            get { return _currencyCode; }
+            get { return _productId; }
 
             set
             {
-                if (_currencyCode != value)
+                if (_productId != value)
                 {
-                    _currencyCode = value;
+                    _productId = value;
                     RaisePropertyChanged();
                 }
             }
@@ -5671,8 +5719,7 @@ namespace Ordering.GeneratedServices
     {
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
-        private decimal _amount;
-        private CurrencyCodeType _currencyCode;
+        private PriceContract _price;
         private string _uniqueIdentity;
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
@@ -5708,31 +5755,16 @@ namespace Ordering.GeneratedServices
             }
         }
 
-        [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public decimal Amount
+        [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PriceContract Price
         {
-            get { return _amount; }
+            get { return _price; }
 
             set
             {
-                if (_amount != value)
+                if (_price != value)
                 {
-                    _amount = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        [Newtonsoft.Json.JsonProperty("currencyCode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CurrencyCodeType CurrencyCode
-        {
-            get { return _currencyCode; }
-
-            set
-            {
-                if (_currencyCode != value)
-                {
-                    _currencyCode = value;
+                    _price = value;
                     RaisePropertyChanged();
                 }
             }

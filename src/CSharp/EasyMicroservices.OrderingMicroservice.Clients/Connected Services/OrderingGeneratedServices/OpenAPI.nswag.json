@@ -1440,19 +1440,6 @@
   },
   "components": {
     "schemas": {
-      "AmountContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "value": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
-          }
-        }
-      },
       "CreateOrderRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -1473,12 +1460,12 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "decimal"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "productId": {
+            "type": "integer",
+            "format": "int64"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -1535,12 +1522,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2293,8 +2276,21 @@
             "type": "string",
             "nullable": true
           },
-          "amount": {
-            "$ref": "#/components/schemas/AmountContract"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
+          },
+          "parentId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "product": {
+            "$ref": "#/components/schemas/ProductContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2396,8 +2392,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "$ref": "#/components/schemas/AmountContract"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2443,6 +2439,19 @@
           }
         }
       },
+      "PriceContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCodeType"
+          }
+        }
+      },
       "ProductContract": {
         "type": "object",
         "additionalProperties": false,
@@ -2459,8 +2468,14 @@
             "type": "string",
             "nullable": true
           },
-          "amount": {
-            "$ref": "#/components/schemas/AmountContract"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
+          },
+          "parentId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2562,8 +2577,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "$ref": "#/components/schemas/AmountContract"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2661,12 +2676,12 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "decimal"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "productId": {
+            "type": "integer",
+            "format": "int64"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2727,12 +2742,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
