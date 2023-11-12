@@ -1,5 +1,6 @@
 ﻿using EasyMicroservices.ContentsMicroservice.Clients.Attributes;
 using EasyMicroservices.Cores.Interfaces;
+using EasyMicroservices.Domain.Contracts.Common;
 using EasyMicroservices.Domain.DataTypes;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,11 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Common
     public class ProductLanguageContract : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
     {
         public long Id { get; set; }
-        [ContentLanguage]
+        [ContentLanguage(nameof(ProductContract.Name))]
         public List<LanguageDataContract> Names { get; set; }
-        [ContentLanguage]
+        [ContentLanguage(nameof(ProductContract.Description))]
         public List<LanguageDataContract> Descriptions { get; set; }
-        public decimal Amount { get; set; }
-        public CurrencyCodeType CurrencyCode { get; set; }
+        public PriceContract Price { get; set; }
         public string UniqueIdentity { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? DeletedDateTime { get; set; }
