@@ -1,10 +1,6 @@
 ﻿using EasyMicroservices.Cores.Interfaces;
 using EasyMicroservices.OrderingMicroservice.Database.Schemas;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EasyMicroservices.OrderingMicroservice.Database.Entities
 {
@@ -15,5 +11,6 @@ namespace EasyMicroservices.OrderingMicroservice.Database.Entities
         public long? ParentId { get; set; }
         public ProductEntity Parent { get; set; }
         public ICollection<ProductEntity> Children { get; set; }
+        public ICollection<OrderEntity> Orders { get; set; }
     }
 }
