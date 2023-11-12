@@ -1,3 +1,4 @@
+using CompileTimeMapper;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
 using EasyMicroservices.Cores.Relational.EntityFrameworkCore.Intrerfaces;
@@ -15,6 +16,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
         public static async Task Main(string[] args)
         {
             var app = CreateBuilder(args);
+            UnitOfWork.MapperTypeAssembly = typeof(OrderEntity_CreateOrderRequestContract_Mapper);
             var build = await app.Build<OrderContext>();
             build.MapControllers();
             build.Run();

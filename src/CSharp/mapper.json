@@ -1,0 +1,349 @@
+﻿{
+	"Environments": [
+		{
+			"Name": "TemplateGeneratorMicroservice",
+			"GenerationPath": "D:\\Github\\EasyMicroservices\\Microservices\\Ordering\\src\\CSharp\\EasyMicroservices.OrderingMicroservice.Logics\\Mappers",
+			"BuildPath": "D:\\Github\\EasyMicroservices\\Microservices\\Ordering\\src\\CSharp\\EasyMicroservices.OrderingMicroservice.WebApi\\bin\\Debug\\net7.0",
+			"NameSpaces": [
+				"EasyMicroservices.Mapper.Interfaces",
+				"EasyMicroservices.Mapper.CompileTimeMapper.Interfaces",
+				"System.Linq"
+			],
+			"Groups": [
+				{
+					"DisplayName": "OrderEntity_OrderContract",
+					"MapFrom": {
+						"Name": "OrderEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "OrderContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Common",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "Children"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				},
+				{
+					"DisplayName": "OrderEntity_CreateOrderRequestContract",
+					"MapFrom": {
+						"Name": "OrderEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "CreateOrderRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "Id"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Product"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				},
+				{
+					"DisplayName": "OrderEntity_UpdateOrderRequestContract",
+					"MapFrom": {
+						"Name": "OrderEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "UpdateOrderRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Product"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				},
+				{
+					"DisplayName": "ProductEntity_ProductContract",
+					"MapFrom": {
+						"Name": "ProductEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "ProductContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Common",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "Children"
+						},
+						{
+							"Name": "Orders"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				},
+				{
+					"DisplayName": "ProductEntity_CreateProductRequestContract",
+					"MapFrom": {
+						"Name": "ProductEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "CreateProductRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "Id"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Product"
+						},
+						{
+							"Name": "Orders"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				},
+				{
+					"DisplayName": "ProductEntity_UpdateProductRequestContract",
+					"MapFrom": {
+						"Name": "ProductEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "UpdateProductRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "Parent"
+						},
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Product"
+						},
+						{
+							"Name": "Orders"
+						}
+					],
+					"CustomProperties": [
+						{
+							"FromName": "PriceAmount",
+							"ToName": "$fromObject.Price.Amount"
+						},
+						{
+							"FromName": "CurrencyCode",
+							"ToName": "$fromObject.Price.CurrencyCode"
+						},
+						{
+							"FromName": "Price",
+							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
+						}
+					]
+				}
+			]
+		}
+	]
+}

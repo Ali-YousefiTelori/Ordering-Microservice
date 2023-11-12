@@ -10,10 +10,13 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Common
     public class OrderLanguageContract : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
     {
         public long Id { get; set; }
+
         [ContentLanguage(nameof(OrderContract.Name))]
         public List<LanguageDataContract> Names { get; set; }
+
         [ContentLanguage(nameof(OrderContract.Description))]
         public List<LanguageDataContract> Descriptions { get; set; }
+
         public PriceContract Price { get; set; }
         public string UniqueIdentity { get; set; }
         public bool IsDeleted { get; set; }
