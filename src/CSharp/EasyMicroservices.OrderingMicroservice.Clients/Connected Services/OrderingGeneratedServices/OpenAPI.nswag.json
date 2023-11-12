@@ -1440,6 +1440,19 @@
   },
   "components": {
     "schemas": {
+      "AmountContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCodeType"
+          }
+        }
+      },
       "CreateOrderRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -1462,7 +1475,7 @@
           },
           "amount": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           },
           "currencyCode": {
             "$ref": "#/components/schemas/CurrencyCodeType"
@@ -1524,7 +1537,7 @@
           },
           "amount": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           },
           "currencyCode": {
             "$ref": "#/components/schemas/CurrencyCodeType"
@@ -2281,11 +2294,7 @@
             "nullable": true
           },
           "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+            "$ref": "#/components/schemas/AmountContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2333,6 +2342,10 @@
             "items": {
               "$ref": "#/components/schemas/OrderContract"
             }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
           },
           "hasItems": {
             "type": "boolean",
@@ -2384,11 +2397,7 @@
             }
           },
           "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+            "$ref": "#/components/schemas/AmountContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2451,11 +2460,7 @@
             "nullable": true
           },
           "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+            "$ref": "#/components/schemas/AmountContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2503,6 +2508,10 @@
             "items": {
               "$ref": "#/components/schemas/ProductContract"
             }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
           },
           "hasItems": {
             "type": "boolean",
@@ -2554,11 +2563,7 @@
             }
           },
           "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+            "$ref": "#/components/schemas/AmountContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2608,7 +2613,7 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "servieRouteAddress": {
+          "serviceRouteAddress": {
             "type": "string",
             "nullable": true
           },
@@ -2620,7 +2625,7 @@
             "type": "string",
             "nullable": true
           },
-          "porjectName": {
+          "projectName": {
             "type": "string",
             "nullable": true
           }
@@ -2658,7 +2663,7 @@
           },
           "amount": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           },
           "currencyCode": {
             "$ref": "#/components/schemas/CurrencyCodeType"
@@ -2724,7 +2729,7 @@
           },
           "amount": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           },
           "currencyCode": {
             "$ref": "#/components/schemas/CurrencyCodeType"
