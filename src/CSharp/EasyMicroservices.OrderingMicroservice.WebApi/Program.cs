@@ -12,7 +12,6 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
 {
     public class Program
     {
-
         public static async Task Main(string[] args)
         {
             var app = CreateBuilder(args);
