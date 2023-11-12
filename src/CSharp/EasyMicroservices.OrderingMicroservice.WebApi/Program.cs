@@ -15,7 +15,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
         public static async Task Main(string[] args)
         {
             var app = CreateBuilder(args);
-            var build = await app.Build<OrderContext>();
+            var build = await app.Build<OrderContext>(true);
             build.MapControllers();
             build.Run();
         }
