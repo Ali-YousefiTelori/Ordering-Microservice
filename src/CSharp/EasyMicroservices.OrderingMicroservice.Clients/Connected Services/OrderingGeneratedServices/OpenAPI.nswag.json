@@ -1460,12 +1460,12 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "productId": {
+            "type": "integer",
+            "format": "int64"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -1522,12 +1522,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2280,12 +2276,21 @@
             "type": "string",
             "nullable": true
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "parentId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "product": {
+            "$ref": "#/components/schemas/ProductContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2333,6 +2338,10 @@
             "items": {
               "$ref": "#/components/schemas/OrderContract"
             }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
           },
           "hasItems": {
             "type": "boolean",
@@ -2383,12 +2392,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2434,6 +2439,19 @@
           }
         }
       },
+      "PriceContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCodeType"
+          }
+        }
+      },
       "ProductContract": {
         "type": "object",
         "additionalProperties": false,
@@ -2450,12 +2468,14 @@
             "type": "string",
             "nullable": true
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "parentId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2503,6 +2523,10 @@
             "items": {
               "$ref": "#/components/schemas/ProductContract"
             }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
           },
           "hasItems": {
             "type": "boolean",
@@ -2553,12 +2577,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2608,7 +2628,7 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "servieRouteAddress": {
+          "serviceRouteAddress": {
             "type": "string",
             "nullable": true
           },
@@ -2620,7 +2640,7 @@
             "type": "string",
             "nullable": true
           },
-          "porjectName": {
+          "projectName": {
             "type": "string",
             "nullable": true
           }
@@ -2656,12 +2676,12 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "productId": {
+            "type": "integer",
+            "format": "int64"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -2722,12 +2742,8 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currencyCode": {
-            "$ref": "#/components/schemas/CurrencyCodeType"
+          "price": {
+            "$ref": "#/components/schemas/PriceContract"
           },
           "uniqueIdentity": {
             "type": "string",
