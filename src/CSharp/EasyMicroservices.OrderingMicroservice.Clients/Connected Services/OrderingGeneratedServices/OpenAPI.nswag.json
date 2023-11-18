@@ -5,12 +5,826 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/CountingUnit/Add": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "Add",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/Filter": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "Filter",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/Update": {
+      "put": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "Update",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/UpdateChangedValuesOnly": {
+      "put": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "UpdateChangedValuesOnly",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetAllByLanguage": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetAllByLanguage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetByIdAllLanguage": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetByIdAllLanguage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/AddBulk": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "AddBulk",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountingUnitRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/UpdateBulk": {
+      "put": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "UpdateBulk",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/UpdateBulkChangedValuesOnly": {
+      "put": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "UpdateBulkChangedValuesOnly",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountingUnitRequestContractUpdateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/HardDeleteById": {
+      "delete": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "HardDeleteById",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/HardDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "HardDeleteBulkByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "SoftDeleteById",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "SoftDeleteBulkByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetById": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetById",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetByUniqueIdentity": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetByUniqueIdentity",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetAll": {
+      "get": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetAll",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CountingUnit/GetAllByUniqueIdentity": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetAllByUniqueIdentity",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Order/Add": {
       "post": {
         "tags": [
           "Order"
         ],
-        "operationId": "Add",
+        "operationId": "Add2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -59,7 +873,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "Update",
+        "operationId": "Update2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -108,7 +922,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "UpdateChangedValuesOnly",
+        "operationId": "UpdateChangedValuesOnly2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -157,7 +971,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "Filter",
+        "operationId": "Filter2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -206,7 +1020,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetAllByLanguage",
+        "operationId": "GetAllByLanguage2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -255,7 +1069,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetByIdAllLanguage",
+        "operationId": "GetByIdAllLanguage2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -304,7 +1118,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "AddBulk",
+        "operationId": "AddBulk2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -353,7 +1167,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "UpdateBulk",
+        "operationId": "UpdateBulk2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -402,7 +1216,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "UpdateBulkChangedValuesOnly",
+        "operationId": "UpdateBulkChangedValuesOnly2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -451,7 +1265,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "HardDeleteById",
+        "operationId": "HardDeleteById2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -500,7 +1314,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "HardDeleteBulkByIds",
+        "operationId": "HardDeleteBulkByIds2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -549,7 +1363,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "SoftDeleteById",
+        "operationId": "SoftDeleteById2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -598,7 +1412,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "SoftDeleteBulkByIds",
+        "operationId": "SoftDeleteBulkByIds2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -647,7 +1461,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetById",
+        "operationId": "GetById2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -696,7 +1510,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetByUniqueIdentity",
+        "operationId": "GetByUniqueIdentity2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -745,7 +1559,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetAll",
+        "operationId": "GetAll2",
         "responses": {
           "200": {
             "description": "Success",
@@ -775,7 +1589,7 @@
         "tags": [
           "Order"
         ],
-        "operationId": "GetAllByUniqueIdentity",
+        "operationId": "GetAllByUniqueIdentity2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -824,7 +1638,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Add2",
+        "operationId": "Add3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -873,7 +1687,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Filter2",
+        "operationId": "Filter3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -922,7 +1736,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Update2",
+        "operationId": "Update3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -971,7 +1785,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "UpdateChangedValuesOnly2",
+        "operationId": "UpdateChangedValuesOnly3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1020,7 +1834,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetAllByLanguage2",
+        "operationId": "GetAllByLanguage3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1069,7 +1883,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetByIdAllLanguage2",
+        "operationId": "GetByIdAllLanguage3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1118,7 +1932,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "AddBulk2",
+        "operationId": "AddBulk3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1167,7 +1981,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "UpdateBulk2",
+        "operationId": "UpdateBulk3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1216,7 +2030,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "UpdateBulkChangedValuesOnly2",
+        "operationId": "UpdateBulkChangedValuesOnly3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1265,7 +2079,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "HardDeleteById2",
+        "operationId": "HardDeleteById3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1314,7 +2128,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "HardDeleteBulkByIds2",
+        "operationId": "HardDeleteBulkByIds3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1363,7 +2177,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "SoftDeleteById2",
+        "operationId": "SoftDeleteById3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1412,7 +2226,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "SoftDeleteBulkByIds2",
+        "operationId": "SoftDeleteBulkByIds3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1461,7 +2275,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetById2",
+        "operationId": "GetById3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1510,7 +2324,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetByUniqueIdentity2",
+        "operationId": "GetByUniqueIdentity3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1559,7 +2373,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetAll2",
+        "operationId": "GetAll3",
         "responses": {
           "200": {
             "description": "Success",
@@ -1589,7 +2403,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "GetAllByUniqueIdentity2",
+        "operationId": "GetAllByUniqueIdentity3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1660,6 +2474,166 @@
           7
         ]
       },
+      "CountingUnitContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "deletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "creationDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CountingUnitContractListMessageContract": {
+        "title": "ListMessageContract<CountingUnitContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<CountingUnitContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CountingUnitContract"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        }
+      },
+      "CountingUnitContractMessageContract": {
+        "title": "MessageContract<CountingUnitContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "$ref": "#/components/schemas/CountingUnitContract"
+          }
+        }
+      },
+      "CountingUnitLanguageContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "deletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "creationDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "names": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          },
+          "descriptions": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          }
+        }
+      },
+      "CountingUnitLanguageContractMessageContract": {
+        "title": "MessageContract<CountingUnitLanguageContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "$ref": "#/components/schemas/CountingUnitLanguageContract"
+          }
+        }
+      },
       "CountingUnitType": {
         "type": "integer",
         "format": "int32",
@@ -1681,6 +2655,47 @@
           5,
           6
         ]
+      },
+      "CreateCountingUnitRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "names": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          },
+          "descriptions": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateCountingUnitRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateCountingUnitRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateCountingUnitRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateCountingUnitRequestContract"
+            }
+          }
+        }
       },
       "CreateOrderRequestContract": {
         "type": "object",
@@ -1769,8 +2784,11 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "countingUnitType": {
-            "$ref": "#/components/schemas/CountingUnitType"
+          "countingUnitId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "prices": {
             "title": "List<ProductPriceContract>",
@@ -2832,6 +3850,12 @@
             "format": "int64",
             "nullable": true
           },
+          "countingUnitId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
           "uniqueIdentity": {
             "type": "string",
             "nullable": true
@@ -2936,6 +3960,12 @@
             }
           },
           "parentId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "countingUnitId": {
             "title": "Nullable<Int64>",
             "type": "integer",
             "format": "int64",
@@ -3087,6 +4117,51 @@
           }
         }
       },
+      "UpdateCountingUnitRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "names": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          },
+          "descriptions": {
+            "title": "List<LanguageDataContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDataContract"
+            }
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "UpdateCountingUnitRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateCountingUnitRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateCountingUnitRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateCountingUnitRequestContract"
+            }
+          }
+        }
+      },
       "UpdateOrderRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -3178,8 +4253,11 @@
               "$ref": "#/components/schemas/LanguageDataContract"
             }
           },
-          "countingUnitType": {
-            "$ref": "#/components/schemas/CountingUnitType"
+          "countingUnitId": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "prices": {
             "title": "List<ProductPriceContract>",
