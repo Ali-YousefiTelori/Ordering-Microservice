@@ -10,7 +10,11 @@ namespace EasyMicroservices.OrderingMicroservice.Database.Entities
 
         public long? ParentId { get; set; }
         public ProductEntity Parent { get; set; }
+        public long? CountingUnitId { get; set; }
+        public CountingUnitEntity CountingUnit { get; set; }
+
         public ICollection<ProductEntity> Children { get; set; }
         public ICollection<OrderEntity> Orders { get; set; }
+        public ICollection<ProductPriceEntity> Prices { get; set; }
     }
 }

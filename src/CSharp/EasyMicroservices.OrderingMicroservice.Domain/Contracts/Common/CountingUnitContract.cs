@@ -2,7 +2,7 @@
 
 namespace EasyMicroservices.OrderingMicroservice.Contracts.Common
 {
-    public class ProductContract : ProductBaseContract
+    public class CountingUnitContract : CountingUnitBaseContract
     {
         public long Id { get; set; }
 

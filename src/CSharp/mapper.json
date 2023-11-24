@@ -199,6 +199,9 @@
 						},
 						{
 							"Name": "Orders"
+						},
+						{
+							"Name": "CountingUnit"
 						}
 					],
 					"CustomProperties": [
@@ -264,6 +267,9 @@
 						},
 						{
 							"Name": "Orders"
+						},
+						{
+							"Name": "CountingUnit"
 						}
 					],
 					"CustomProperties": [
@@ -326,6 +332,9 @@
 						},
 						{
 							"Name": "Orders"
+						},
+						{
+							"Name": "CountingUnit"
 						}
 					],
 					"CustomProperties": [
@@ -342,6 +351,146 @@
 							"ToName": "$new EasyMicroservices.Domain.Contracts.Common.PriceContract() { Amount = fromObject.PriceAmount, CurrencyCode = fromObject.CurrencyCode }"
 						}
 					]
+				},
+				{
+					"DisplayName": "OrderPriceEntity_OrderPriceContract",
+					"MapFrom": {
+						"Name": "OrderPriceEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "OrderPriceContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Common",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Order"
+						}
+					],
+					"CustomProperties": []
+				},
+				{
+					"DisplayName": "ProductPriceEntity_ProductPriceContract",
+					"MapFrom": {
+						"Name": "ProductPriceEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "ProductPriceContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Common",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Product"
+						}
+					],
+					"CustomProperties": []
+				},
+				{
+					"DisplayName": "CountingUnitEntity_CountingUnitContract",
+					"MapFrom": {
+						"Name": "CountingUnitEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "CountingUnitContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Common",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Name"
+						},
+						{
+							"Name": "Description"
+						},
+						{
+							"Name": "Products"
+						}
+					],
+					"CustomProperties": []
+				},
+				{
+					"DisplayName": "CountingUnitEntity_CreateCountingUnitRequestContract",
+					"MapFrom": {
+						"Name": "CountingUnitEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "CreateCountingUnitRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Id"
+						},
+						{
+							"Name": "Products"
+						}
+					],
+					"CustomProperties": []
+				},
+				{
+					"DisplayName": "CountingUnitEntity_UpdateCountingUnitRequestContract",
+					"MapFrom": {
+						"Name": "CountingUnitEntity",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Database.Entities",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Database.dll"
+					},
+					"MapTo": {
+						"Name": "UpdateCountingUnitRequestContract",
+						"Namespace": "EasyMicroservices.OrderingMicroservice.Contracts.Requests",
+						"AssebmlyFileName": "EasyMicroservices.OrderingMicroservice.Domain.dll"
+					},
+					"SkippedProperties": [
+						{
+							"Name": "CreationDateTime"
+						},
+						{
+							"Name": "DeletedDateTime"
+						},
+						{
+							"Name": "IsDeleted"
+						},
+						{
+							"Name": "ModificationDateTime"
+						},
+						{
+							"Name": "Names"
+						},
+						{
+							"Name": "Descriptions"
+						},
+						{
+							"Name": "Products"
+						}
+					],
+					"CustomProperties": []
 				}
 			]
 		}
