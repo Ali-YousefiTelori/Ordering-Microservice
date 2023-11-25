@@ -1,6 +1,5 @@
 ﻿using EasyMicroservices.ContentsMicroservice.Clients.Helpers;
 using EasyMicroservices.Cores.AspCoreApi;
-using EasyMicroservices.Cores.AspEntityFrameworkCoreApi;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
 using EasyMicroservices.Cores.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Contracts.Common;
@@ -48,6 +47,28 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
                 if (!updateToContent.IsSuccess)
                     return updateToContent.ToContract<OrderContract>();
             }
+            return result;
+        }
+
+        public override async Task<MessageContract<OrderContract>> UpdateChangedValuesOnly(UpdateOrderRequestContract request, CancellationToken cancellationToken = default)
+        {
+            var result = await base.Update(request, cancellationToken);
+            if (result)
+            {
+                var addedItem = await GetById(new Cores.Contracts.Requests.GetIdRequestContract<long> { Id = request.Id });
+                request.UniqueIdentity = addedItem.Result.UniqueIdentity;
+                var updateToContent = await _contentHelper.UpdateToContentLanguage(request);
+                if (!updateToContent.IsSuccess)
+                    return updateToContent.ToContract<OrderContract>();
+            }
+            return result;
+        }
+
+        public override async Task<ListMessageContract<OrderContract>> Filter(FilterRequestContract filterRequest, CancellationToken cancellationToken = default)
+        {
+            var result = await base.Filter(filterRequest, cancellationToken);
+            result.ThrowsIfFails();
+            await _contentHelper.ResolveContentLanguage(result.Result, filterRequest.Language);
             return result;
         }
 

@@ -6,7 +6,6 @@ using EasyMicroservices.OrderingMicroservice.Contracts.Common;
 using EasyMicroservices.OrderingMicroservice.Contracts.Requests;
 using EasyMicroservices.OrderingMicroservice.Database.Contexts;
 using EasyMicroservices.OrderingMicroservice.Database.Entities;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace EasyMicroservices.OrderingMicroservice.WebApi
 {
@@ -18,6 +17,12 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
             UnitOfWork.MapperTypeAssembly = typeof(OrderEntity_CreateOrderRequestContract_Mapper);
             var build = await app.Build<OrderContext>();
             build.MapControllers();
+            build.UseCors(x => x
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials()
+            //.WithOrigins("https://localhost:44351")); // Allow only this origin can also have multiple origins seperated with comma
+            .SetIsOriginAllowed(origin => true));
             build.Run();
         }
 
@@ -29,6 +34,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
             app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>());
             app.Services.AddTransient(serviceProvider => new OrderContext(serviceProvider.GetService<IEntityFrameworkCoreDatabaseBuilder>()));
             app.Services.AddScoped<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder(serviceProvider.GetService<IConfiguration>()));
+
             StartUpExtensions.AddWhiteLabel("Ordering", "RootAddresses:WhiteLabel");
             return app;
         }

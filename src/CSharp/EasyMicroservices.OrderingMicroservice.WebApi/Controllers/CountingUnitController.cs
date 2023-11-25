@@ -11,24 +11,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
 {
-    public class ProductController : SimpleQueryServiceController<ProductEntity, CreateProductRequestContract, UpdateProductRequestContract, ProductContract, long>
+    public class CountingUnitController : SimpleQueryServiceController<CountingUnitEntity, CreateCountingUnitRequestContract, UpdateCountingUnitRequestContract, CountingUnitContract, long>
     {
         private readonly IConfiguration _config;
         private readonly ContentLanguageHelper _contentHelper;
         readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfWork, IConfiguration config) : base(unitOfWork)
+        public CountingUnitController(IUnitOfWork unitOfWork, IConfiguration config) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _config = config;
             _contentHelper = new(new Contents.GeneratedServices.ContentClient(_config.GetValue<string>("RootAddresses:Content"), new HttpClient()));
         }
 
-        protected override Func<IQueryable<ProductEntity>, IQueryable<ProductEntity>> OnGetAllQuery()
-        {
-            return (q) => q.Include(x => x.Prices);
-        }
-
-        public override async Task<MessageContract<long>> Add(CreateProductRequestContract request, CancellationToken cancellationToken = default)
+        public override async Task<MessageContract<long>> Add(CreateCountingUnitRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.Add(request, cancellationToken);
             if (result)
@@ -41,7 +36,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
             }
             return result;
         }
-        public override async Task<ListMessageContract<ProductContract>> Filter(FilterRequestContract filterRequest, CancellationToken cancellationToken = default)
+        public override async Task<ListMessageContract<CountingUnitContract>> Filter(FilterRequestContract filterRequest, CancellationToken cancellationToken = default)
         {
             var result = await base.Filter(filterRequest, cancellationToken);
             result.ThrowsIfFails();
@@ -50,7 +45,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
         }
 
 
-        public override async Task<MessageContract<ProductContract>> Update(UpdateProductRequestContract request, CancellationToken cancellationToken = default)
+        public override async Task<MessageContract<CountingUnitContract>> Update(UpdateCountingUnitRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.Update(request, cancellationToken).AsCheckedResult();
             request.UniqueIdentity = result.UniqueIdentity;
@@ -58,7 +53,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
             return result;
         }
 
-        public override async Task<MessageContract<ProductContract>> UpdateChangedValuesOnly(UpdateProductRequestContract request, CancellationToken cancellationToken = default)
+        public override async Task<MessageContract<CountingUnitContract>> UpdateChangedValuesOnly(UpdateCountingUnitRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.UpdateChangedValuesOnly(request, cancellationToken).AsCheckedResult();
             request.UniqueIdentity = result.UniqueIdentity;
@@ -67,7 +62,7 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ListMessageContract<ProductContract>> GetAllByLanguage(GetByLanguageRequestContract request, CancellationToken cancellationToken = default)
+        public async Task<ListMessageContract<CountingUnitContract>> GetAllByLanguage(GetByLanguageRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.GetAll(cancellationToken);
             if (result)
@@ -78,16 +73,16 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<MessageContract<ProductLanguageContract>> GetByIdAllLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
+        public async Task<MessageContract<CountingUnitLanguageContract>> GetByIdAllLanguage(GetIdRequestContract<long> request, CancellationToken cancellationToken = default)
         {
             var result = await base.GetById(request.Id, cancellationToken);
             if (result)
             {
-                var mapped = _unitOfWork.GetMapper().Map<ProductLanguageContract>(result.Result);
+                var mapped = _unitOfWork.GetMapper().Map<CountingUnitLanguageContract>(result.Result);
                 await _contentHelper.ResolveContentAllLanguage(mapped);
                 return mapped;
             }
-            return result.ToContract<ProductLanguageContract>();
+            return result.ToContract<CountingUnitLanguageContract>();
         }
     }
 }

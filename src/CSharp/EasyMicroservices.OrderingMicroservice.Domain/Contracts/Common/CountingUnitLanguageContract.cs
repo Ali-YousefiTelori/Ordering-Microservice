@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EasyMicroservices.OrderingMicroservice.Contracts.Common
 {
-    public class OrderLanguageContract : OrderBaseContract
+    public class CountingUnitLanguageContract : CountingUnitBaseContract
     {
         public long Id { get; set; }
 
