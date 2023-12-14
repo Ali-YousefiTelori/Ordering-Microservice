@@ -15,26 +15,20 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
         {
             var app = CreateBuilder(args);
             UnitOfWork.MapperTypeAssembly = typeof(OrderEntity_CreateOrderRequestContract_Mapper);
-            var build = await app.Build<OrderContext>();
+            var build = await app.BuildWithUseCors<OrderContext>(null, true);
             build.MapControllers();
-            build.UseCors(x => x
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials()
-            //.WithOrigins("https://localhost:44351")); // Allow only this origin can also have multiple origins seperated with comma
-            .SetIsOriginAllowed(origin => true));
-            build.Run();
+            await build.RunAsync();
         }
 
         static WebApplicationBuilder CreateBuilder(string[] args)
         {
             var app = StartUpExtensions.Create<OrderContext>(args);
-            app.Services.Builder<OrderContext>();
+            app.Services.Builder<OrderContext>().UseDefaultSwaggerOptions();
             app.Services.AddScoped((serviceProvider) => new UnitOfWork(serviceProvider));
             app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>());
             app.Services.AddTransient(serviceProvider => new OrderContext(serviceProvider.GetService<IEntityFrameworkCoreDatabaseBuilder>()));
-            app.Services.AddScoped<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder(serviceProvider.GetService<IConfiguration>()));
-
+            app.Services.AddTransient<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder(serviceProvider.GetService<IConfiguration>()));
+            StartUpExtensions.AddAuthentication("RootAddresses:Authentication");
             StartUpExtensions.AddWhiteLabel("Ordering", "RootAddresses:WhiteLabel");
             return app;
         }

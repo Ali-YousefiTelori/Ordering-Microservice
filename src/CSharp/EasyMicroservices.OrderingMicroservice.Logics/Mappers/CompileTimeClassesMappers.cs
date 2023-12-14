@@ -633,6 +633,7 @@ namespace CompileTimeMapper
             {
                 Children = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductEntity>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 ParentId = fromObject.ParentId,
                 Prices = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductPriceEntity>(fromObject.Prices, uniqueRecordId, language, parameters),
                 UniqueIdentity = fromObject.UniqueIdentity,
@@ -648,6 +649,7 @@ namespace CompileTimeMapper
             {
                 Children = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Contracts.Requests.CreateProductRequestContract>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 ParentId = fromObject.ParentId,
                 Prices = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Contracts.Common.ProductPriceContract>(fromObject.Prices, uniqueRecordId, language, parameters),
                 UniqueIdentity = fromObject.UniqueIdentity,
@@ -663,6 +665,7 @@ namespace CompileTimeMapper
             {
                 Children = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductEntity>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 ParentId = fromObject.ParentId,
                 Prices = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductPriceEntity>(fromObject.Prices, uniqueRecordId, language, parameters),
                 UniqueIdentity = fromObject.UniqueIdentity,
@@ -678,6 +681,7 @@ namespace CompileTimeMapper
             {
                 Children = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Contracts.Requests.CreateProductRequestContract>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 ParentId = fromObject.ParentId,
                 Prices = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Contracts.Common.ProductPriceContract>(fromObject.Prices, uniqueRecordId, language, parameters),
                 UniqueIdentity = fromObject.UniqueIdentity,
@@ -718,6 +722,7 @@ namespace CompileTimeMapper
                 CountingUnitId = fromObject.CountingUnitId,
                 CreationDateTime = fromObject.CreationDateTime,
                 DeletedDateTime = fromObject.DeletedDateTime,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 IsDeleted = fromObject.IsDeleted,
                 ModificationDateTime = fromObject.ModificationDateTime,
@@ -737,6 +742,7 @@ namespace CompileTimeMapper
                 CountingUnitId = fromObject.CountingUnitId,
                 CreationDateTime = fromObject.CreationDateTime,
                 DeletedDateTime = fromObject.DeletedDateTime,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 IsDeleted = fromObject.IsDeleted,
                 ModificationDateTime = fromObject.ModificationDateTime,
@@ -756,6 +762,7 @@ namespace CompileTimeMapper
                 CountingUnitId = fromObject.CountingUnitId,
                 CreationDateTime = fromObject.CreationDateTime,
                 DeletedDateTime = fromObject.DeletedDateTime,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 IsDeleted = fromObject.IsDeleted,
                 ModificationDateTime = fromObject.ModificationDateTime,
@@ -775,6 +782,7 @@ namespace CompileTimeMapper
                 CountingUnitId = fromObject.CountingUnitId,
                 CreationDateTime = fromObject.CreationDateTime,
                 DeletedDateTime = fromObject.DeletedDateTime,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 IsDeleted = fromObject.IsDeleted,
                 ModificationDateTime = fromObject.ModificationDateTime,
@@ -817,6 +825,7 @@ namespace CompileTimeMapper
             {
                 Children = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductEntity>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 ParentId = fromObject.ParentId,
                 Prices = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductPriceEntity>(fromObject.Prices, uniqueRecordId, language, parameters),
@@ -833,6 +842,7 @@ namespace CompileTimeMapper
             {
                 Children = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Contracts.Requests.CreateProductRequestContract>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 ParentId = fromObject.ParentId,
                 Prices = _mapper.MapToList<global::EasyMicroservices.OrderingMicroservice.Contracts.Common.ProductPriceContract>(fromObject.Prices, uniqueRecordId, language, parameters),
@@ -849,6 +859,7 @@ namespace CompileTimeMapper
             {
                 Children = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductEntity>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 ParentId = fromObject.ParentId,
                 Prices = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Database.Entities.ProductPriceEntity>(fromObject.Prices, uniqueRecordId, language, parameters),
@@ -865,6 +876,7 @@ namespace CompileTimeMapper
             {
                 Children = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Contracts.Requests.CreateProductRequestContract>(fromObject.Children, uniqueRecordId, language, parameters),
                 CountingUnitId = fromObject.CountingUnitId,
+                ExternalServiceIdentifier = fromObject.ExternalServiceIdentifier,
                 Id = fromObject.Id,
                 ParentId = fromObject.ParentId,
                 Prices = await _mapper.MapToListAsync<global::EasyMicroservices.OrderingMicroservice.Contracts.Common.ProductPriceContract>(fromObject.Prices, uniqueRecordId, language, parameters),
