@@ -28,6 +28,11 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi.Controllers
             return (q) => q.Include(x => x.Prices);
         }
 
+        protected override Func<IQueryable<ProductEntity>, IQueryable<ProductEntity>> OnGetQuery()
+        {
+            return OnGetAllQuery();
+        }
+
         public override async Task<MessageContract<long>> Add(CreateProductRequestContract request, CancellationToken cancellationToken = default)
         {
             var result = await base.Add(request, cancellationToken);

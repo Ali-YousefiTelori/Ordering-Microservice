@@ -7,6 +7,7 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Common
 {
     public class ProductBaseContract : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
     {
+        public string ExternalServiceIdentifier { get; set; }
         public List<ProductPriceContract> Prices { get; set; }
         public long? ParentId { get; set; }
         public long? CountingUnitId { get; set; }

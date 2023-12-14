@@ -8,6 +8,7 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Requests
 {
     public class CreateProductRequestContract : IUniqueIdentitySchema
     {
+        public string ExternalServiceIdentifier { get; set; }
         [ContentLanguage(nameof(OrderContract.Name))]
         public List<LanguageDataContract> Names { get; set; }
         [ContentLanguage(nameof(OrderContract.Description))]

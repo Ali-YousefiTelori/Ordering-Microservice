@@ -19,7 +19,7 @@ namespace Ordering.GeneratedServices
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
-    public partial class CountingUnitClient 
+    public partial class CountingUnitClient : EasyMicroservices.Cores.Clients.CoreSwaggerClientBase
     {
         private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
@@ -34,7 +34,7 @@ namespace Ordering.GeneratedServices
 
         private Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
-            var settings = new EasyMicroservices.OrderingMicroservice.Clients.MyJsonSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
+            var settings = new EasyMicroservices.Cores.Clients.CoreSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
             UpdateJsonSerializerSettings(settings);
             return settings;
         }
@@ -72,7 +72,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -150,7 +150,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -228,7 +228,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -306,7 +306,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -384,7 +384,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -462,7 +462,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -540,7 +540,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -618,7 +618,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -696,7 +696,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -774,7 +774,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -852,7 +852,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -930,7 +930,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1008,7 +1008,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1086,7 +1086,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1164,7 +1164,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1242,7 +1242,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     request_.Method = new System.Net.Http.HttpMethod("GET");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("text/plain"));
@@ -1316,7 +1316,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1479,7 +1479,7 @@ namespace Ordering.GeneratedServices
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
-    public partial class OrderClient 
+    public partial class OrderClient : EasyMicroservices.Cores.Clients.CoreSwaggerClientBase
     {
         private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
@@ -1494,7 +1494,7 @@ namespace Ordering.GeneratedServices
 
         private Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
-            var settings = new EasyMicroservices.OrderingMicroservice.Clients.MyJsonSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
+            var settings = new EasyMicroservices.Cores.Clients.CoreSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
             UpdateJsonSerializerSettings(settings);
             return settings;
         }
@@ -1532,7 +1532,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1610,7 +1610,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1688,7 +1688,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1766,7 +1766,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1844,7 +1844,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -1922,7 +1922,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2000,7 +2000,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2078,7 +2078,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2156,7 +2156,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2234,7 +2234,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2312,7 +2312,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2390,7 +2390,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2468,7 +2468,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2546,7 +2546,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2624,7 +2624,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2702,7 +2702,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     request_.Method = new System.Net.Http.HttpMethod("GET");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("text/plain"));
@@ -2776,7 +2776,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -2939,7 +2939,7 @@ namespace Ordering.GeneratedServices
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
-    public partial class ProductClient 
+    public partial class ProductClient : EasyMicroservices.Cores.Clients.CoreSwaggerClientBase
     {
         private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
@@ -2954,7 +2954,7 @@ namespace Ordering.GeneratedServices
 
         private Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
-            var settings = new EasyMicroservices.OrderingMicroservice.Clients.MyJsonSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
+            var settings = new EasyMicroservices.Cores.Clients.CoreSerializerSettings(new Newtonsoft.Json.JsonSerializerSettings {  });
             UpdateJsonSerializerSettings(settings);
             return settings;
         }
@@ -2992,7 +2992,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3070,7 +3070,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3148,7 +3148,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3226,7 +3226,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3304,7 +3304,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3382,7 +3382,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3460,7 +3460,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3538,7 +3538,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3616,7 +3616,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3694,7 +3694,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3772,7 +3772,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3850,7 +3850,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -3928,7 +3928,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -4006,7 +4006,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -4084,7 +4084,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -4162,7 +4162,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     request_.Method = new System.Net.Http.HttpMethod("GET");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("text/plain"));
@@ -4236,7 +4236,7 @@ namespace Ordering.GeneratedServices
             var disposeClient_ = false;
             try
             {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                using (var request_ = await CreateHttpRequestMessageAsync(cancellationToken).ConfigureAwait(false))
                 {
                     var json_ = Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value);
                     var content_ = new System.Net.Http.StringContent(json_);
@@ -4425,9 +4425,9 @@ namespace Ordering.GeneratedServices
     {
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private string _name;
         private string _description;
@@ -4463,7 +4463,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -4478,7 +4478,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -4493,7 +4493,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -4755,9 +4755,9 @@ namespace Ordering.GeneratedServices
     {
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
@@ -4793,7 +4793,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -4808,7 +4808,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -4823,7 +4823,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -4968,26 +4968,6 @@ namespace Ordering.GeneratedServices
             if (handler != null)
                 handler(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
         }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
-    public enum CountingUnitType
-    {
-
-        None = 0,
-
-        Default = 1,
-
-        All = 2,
-
-        Other = 3,
-
-        Unknown = 4,
-
-        Nothing = 5,
-
-        Number = 6,
-
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
@@ -5241,6 +5221,7 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class CreateProductRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
         private long? _countingUnitId;
@@ -5248,6 +5229,21 @@ namespace Ordering.GeneratedServices
         private string _uniqueIdentity;
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
+
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
+        {
+            get { return _externalServiceIdentifier; }
+
+            set
+            {
+                if (_externalServiceIdentifier != value)
+                {
+                    _externalServiceIdentifier = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
         [Newtonsoft.Json.JsonProperty("names", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<LanguageDataContract> Names
@@ -5960,12 +5956,12 @@ namespace Ordering.GeneratedServices
     public partial class FilterRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
         private bool? _isDeleted;
-        private System.DateTimeOffset? _fromDeletedDateTime;
-        private System.DateTimeOffset? _toDeletedDateTime;
-        private System.DateTimeOffset? _fromCreationDateTime;
-        private System.DateTimeOffset? _toCreationDateTime;
-        private System.DateTimeOffset? _fromModificationDateTime;
-        private System.DateTimeOffset? _toModificationDateTime;
+        private System.DateTime? _fromDeletedDateTime;
+        private System.DateTime? _toDeletedDateTime;
+        private System.DateTime? _fromCreationDateTime;
+        private System.DateTime? _toCreationDateTime;
+        private System.DateTime? _fromModificationDateTime;
+        private System.DateTime? _toModificationDateTime;
         private string _uniqueIdentity;
         private GetUniqueIdentityType _uniqueIdentityType;
         private long? _index;
@@ -5991,7 +5987,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("fromDeletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? FromDeletedDateTime
+        public System.DateTime? FromDeletedDateTime
         {
             get { return _fromDeletedDateTime; }
 
@@ -6006,7 +6002,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("toDeletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ToDeletedDateTime
+        public System.DateTime? ToDeletedDateTime
         {
             get { return _toDeletedDateTime; }
 
@@ -6021,7 +6017,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("fromCreationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? FromCreationDateTime
+        public System.DateTime? FromCreationDateTime
         {
             get { return _fromCreationDateTime; }
 
@@ -6036,7 +6032,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("toCreationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ToCreationDateTime
+        public System.DateTime? ToCreationDateTime
         {
             get { return _toCreationDateTime; }
 
@@ -6051,7 +6047,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("fromModificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? FromModificationDateTime
+        public System.DateTime? FromModificationDateTime
         {
             get { return _fromModificationDateTime; }
 
@@ -6066,7 +6062,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("toModificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ToModificationDateTime
+        public System.DateTime? ToModificationDateTime
         {
             get { return _toModificationDateTime; }
 
@@ -6685,9 +6681,9 @@ namespace Ordering.GeneratedServices
         private ProductContract _product;
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private string _name;
         private string _description;
@@ -6783,7 +6779,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -6798,7 +6794,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -6813,7 +6809,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -7079,9 +7075,9 @@ namespace Ordering.GeneratedServices
         private ProductContract _product;
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
@@ -7177,7 +7173,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -7192,7 +7188,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -7207,7 +7203,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -7361,10 +7357,10 @@ namespace Ordering.GeneratedServices
         private AmountType _amountType;
         private CurrencyCodeType _currencyCode;
         private PriceType _type;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
+        private System.DateTime? _deletedDateTime;
         private string _uniqueIdentity;
         private long _id;
         private long _orderId;
@@ -7430,7 +7426,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -7445,7 +7441,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -7475,7 +7471,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -7569,29 +7565,29 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class ProductContract : System.ComponentModel.INotifyPropertyChanged
     {
-        private CountingUnitType _countingUnitType;
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<ProductPriceContract> _prices;
         private long? _parentId;
         private long? _countingUnitId;
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private string _name;
         private string _description;
 
-        [Newtonsoft.Json.JsonProperty("countingUnitType", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CountingUnitType CountingUnitType
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
         {
-            get { return _countingUnitType; }
+            get { return _externalServiceIdentifier; }
 
             set
             {
-                if (_countingUnitType != value)
+                if (_externalServiceIdentifier != value)
                 {
-                    _countingUnitType = value;
+                    _externalServiceIdentifier = value;
                     RaisePropertyChanged();
                 }
             }
@@ -7673,7 +7669,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -7688,7 +7684,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -7703,7 +7699,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -7963,29 +7959,29 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class ProductLanguageContract : System.ComponentModel.INotifyPropertyChanged
     {
-        private CountingUnitType _countingUnitType;
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<ProductPriceContract> _prices;
         private long? _parentId;
         private long? _countingUnitId;
         private string _uniqueIdentity;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime? _deletedDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private long _id;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
 
-        [Newtonsoft.Json.JsonProperty("countingUnitType", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CountingUnitType CountingUnitType
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
         {
-            get { return _countingUnitType; }
+            get { return _externalServiceIdentifier; }
 
             set
             {
-                if (_countingUnitType != value)
+                if (_externalServiceIdentifier != value)
                 {
-                    _countingUnitType = value;
+                    _externalServiceIdentifier = value;
                     RaisePropertyChanged();
                 }
             }
@@ -8067,7 +8063,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -8082,7 +8078,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -8097,7 +8093,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -8251,10 +8247,10 @@ namespace Ordering.GeneratedServices
         private AmountType _amountType;
         private CurrencyCodeType _currencyCode;
         private PriceType _type;
-        private System.DateTimeOffset _creationDateTime;
-        private System.DateTimeOffset? _modificationDateTime;
+        private System.DateTime _creationDateTime;
+        private System.DateTime? _modificationDateTime;
         private bool _isDeleted;
-        private System.DateTimeOffset? _deletedDateTime;
+        private System.DateTime? _deletedDateTime;
         private string _uniqueIdentity;
         private long _id;
         private long _productId;
@@ -8320,7 +8316,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("creationDateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset CreationDateTime
+        public System.DateTime CreationDateTime
         {
             get { return _creationDateTime; }
 
@@ -8335,7 +8331,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("modificationDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? ModificationDateTime
+        public System.DateTime? ModificationDateTime
         {
             get { return _modificationDateTime; }
 
@@ -8365,7 +8361,7 @@ namespace Ordering.GeneratedServices
         }
 
         [Newtonsoft.Json.JsonProperty("deletedDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? DeletedDateTime
+        public System.DateTime? DeletedDateTime
         {
             get { return _deletedDateTime; }
 
@@ -8825,6 +8821,7 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class UpdateProductRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
         private long? _countingUnitId;
@@ -8833,6 +8830,21 @@ namespace Ordering.GeneratedServices
         private long? _parentId;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
         private long _id;
+
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
+        {
+            get { return _externalServiceIdentifier; }
+
+            set
+            {
+                if (_externalServiceIdentifier != value)
+                {
+                    _externalServiceIdentifier = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
         [Newtonsoft.Json.JsonProperty("names", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<LanguageDataContract> Names

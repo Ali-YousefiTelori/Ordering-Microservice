@@ -2634,28 +2634,6 @@
           }
         }
       },
-      "CountingUnitType": {
-        "type": "integer",
-        "format": "int32",
-        "x-enumNames": [
-          "None",
-          "Default",
-          "All",
-          "Other",
-          "Unknown",
-          "Nothing",
-          "Number"
-        ],
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      },
       "CreateCountingUnitRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -2768,6 +2746,10 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
+          "externalServiceIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
           "names": {
             "title": "List<LanguageDataContract>",
             "type": "array",
@@ -3833,8 +3815,9 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "countingUnitType": {
-            "$ref": "#/components/schemas/CountingUnitType"
+          "externalServiceIdentifier": {
+            "type": "string",
+            "nullable": true
           },
           "prices": {
             "title": "List<ProductPriceContract>",
@@ -3948,8 +3931,9 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "countingUnitType": {
-            "$ref": "#/components/schemas/CountingUnitType"
+          "externalServiceIdentifier": {
+            "type": "string",
+            "nullable": true
           },
           "prices": {
             "title": "List<ProductPriceContract>",
@@ -4237,6 +4221,10 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
+          "externalServiceIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
           "names": {
             "title": "List<LanguageDataContract>",
             "type": "array",
@@ -4316,6 +4304,19 @@
           }
         }
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter your token in the text input below.\r\n Example: \"Bearer {token}\"",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ]
 }
