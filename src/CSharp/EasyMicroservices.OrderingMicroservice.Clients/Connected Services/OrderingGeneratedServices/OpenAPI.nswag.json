@@ -771,17 +771,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               }
             }
@@ -819,6 +819,55 @@
         }
       }
     },
+    "/api/CountingUnit/GetAllByLanguage": {
+      "post": {
+        "tags": [
+          "CountingUnit"
+        ],
+        "operationId": "GetAllByLanguage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountingUnitContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/CountingUnit/GetAllWithAllLanguage": {
       "post": {
         "tags": [
@@ -831,17 +880,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               }
             }
@@ -929,17 +978,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CountingUnitLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/CountingUnitLanguageContractListMessageContract"
                 }
               }
             }
@@ -1713,17 +1762,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               }
             }
@@ -1761,6 +1810,55 @@
         }
       }
     },
+    "/api/Order/GetAllByLanguage": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "GetAllByLanguage2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Order/GetAllWithAllLanguage": {
       "post": {
         "tags": [
@@ -1773,17 +1871,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               }
             }
@@ -1871,17 +1969,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/OrderLanguageContractListMessageContract"
                 }
               }
             }
@@ -2655,17 +2753,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               }
             }
@@ -2703,6 +2801,55 @@
         }
       }
     },
+    "/api/Product/GetAllByLanguage": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "GetAllByLanguage3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetByLanguageRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Product/GetAllWithAllLanguage": {
       "post": {
         "tags": [
@@ -2715,17 +2862,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               }
             }
@@ -2813,17 +2960,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLanguageContractMessageContract"
+                  "$ref": "#/components/schemas/ProductLanguageContractListMessageContract"
                 }
               }
             }
@@ -2996,6 +3143,38 @@
             "items": {
               "$ref": "#/components/schemas/LanguageDataContract"
             }
+          }
+        }
+      },
+      "CountingUnitLanguageContractListMessageContract": {
+        "title": "ListMessageContract<CountingUnitLanguageContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<CountingUnitLanguageContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CountingUnitLanguageContract"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
           }
         }
       },
@@ -3753,6 +3932,16 @@
           }
         }
       },
+      "GetByLanguageRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "languageShortName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
       "GetByUniqueIdentityLanguageRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -4125,6 +4314,38 @@
           }
         }
       },
+      "OrderLanguageContractListMessageContract": {
+        "title": "ListMessageContract<OrderLanguageContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<OrderLanguageContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderLanguageContract"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        }
+      },
       "OrderLanguageContractMessageContract": {
         "title": "MessageContract<OrderLanguageContract>",
         "type": "object",
@@ -4404,6 +4625,38 @@
             "items": {
               "$ref": "#/components/schemas/LanguageDataContract"
             }
+          }
+        }
+      },
+      "ProductLanguageContractListMessageContract": {
+        "title": "ListMessageContract<ProductLanguageContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<ProductLanguageContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ProductLanguageContract"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
           }
         }
       },
