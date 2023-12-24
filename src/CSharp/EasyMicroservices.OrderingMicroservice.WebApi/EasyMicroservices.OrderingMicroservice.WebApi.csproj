@@ -11,13 +11,19 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
+  
   <ItemGroup>
-    <ProjectReference Include="..\EasyMicroservices.OrderingMicroservice.StartUp\EasyMicroservices.OrderingMicroservice.StartUp.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.14" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\EasyMicroservices.OrderingMicroservice.Logics\EasyMicroservices.OrderingMicroservice.Logics.csproj" />
+  </ItemGroup>
+  
 	<ItemGroup>
 		<Content Update="appsettings.json" CopyToPublishDirectory="Never" />
 		<Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
 		<Content Update="appsettings.$(MSBuildThisFileName).json" CopyToPublishDirectory="PreserveNewest" />
 	</ItemGroup>
+  
 </Project>
