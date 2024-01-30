@@ -15,7 +15,7 @@ namespace EasyMicroservices.OrderingMicroservice
             if (entity.IsSqlServer())
                 optionsBuilder.UseSqlServer(entity.ConnectionString);
             else if (entity.IsInMemory())
-                optionsBuilder.UseInMemoryDatabase("Identity");
+                optionsBuilder.UseInMemoryDatabase("Orders");
         }
     }
 }
