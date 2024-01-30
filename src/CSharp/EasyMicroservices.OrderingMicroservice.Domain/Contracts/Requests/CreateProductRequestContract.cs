@@ -8,7 +8,7 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Requests
 {
     public class CreateProductRequestContract : IUniqueIdentitySchema
     {
-        public string ExternalServiceIdentifier { get; set; }
+
         [ContentLanguage(nameof(OrderContract.Name))]
         public List<LanguageDataContract> Names { get; set; }
         [ContentLanguage(nameof(OrderContract.Description))]
@@ -18,6 +18,7 @@ namespace EasyMicroservices.OrderingMicroservice.Contracts.Requests
         public List<ProductPriceContract> Prices { get; set; }
         public string UniqueIdentity { get; set; }
         public long? ParentId { get; set; }
+        public string ExternalServiceIdentifier { get; set; }
 
         public List<CreateProductRequestContract> Children { get; set; }
     }
