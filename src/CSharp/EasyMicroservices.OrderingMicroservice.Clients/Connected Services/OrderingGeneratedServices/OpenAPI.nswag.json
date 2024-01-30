@@ -3309,10 +3309,6 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "externalServiceIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
           "names": {
             "title": "List<LanguageDataContract>",
             "type": "array",
@@ -3351,6 +3347,10 @@
             "title": "Nullable<Int64>",
             "type": "integer",
             "format": "int64",
+            "nullable": true
+          },
+          "externalServiceIdentifier": {
+            "type": "string",
             "nullable": true
           },
           "children": {
@@ -4900,10 +4900,6 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "externalServiceIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
           "names": {
             "title": "List<LanguageDataContract>",
             "type": "array",
@@ -4942,6 +4938,10 @@
             "title": "Nullable<Int64>",
             "type": "integer",
             "format": "int64",
+            "nullable": true
+          },
+          "externalServiceIdentifier": {
+            "type": "string",
             "nullable": true
           },
           "children": {

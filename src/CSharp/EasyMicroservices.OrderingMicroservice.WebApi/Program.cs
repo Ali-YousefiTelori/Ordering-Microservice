@@ -14,22 +14,18 @@ namespace EasyMicroservices.OrderingMicroservice.WebApi
         public static async Task Main(string[] args)
         {
             var app = CreateBuilder(args);
-            UnitOfWork.MapperTypeAssembly = typeof(OrderEntity_CreateOrderRequestContract_Mapper);
             var build = await app.BuildWithUseCors<OrderContext>(null, true);
             build.MapControllers();
-            await build.RunAsync();
+            build.Run();
         }
 
         static WebApplicationBuilder CreateBuilder(string[] args)
         {
             var app = StartUpExtensions.Create<OrderContext>(args);
-            app.Services.Builder<OrderContext>().UseDefaultSwaggerOptions();
-            app.Services.AddScoped((serviceProvider) => new UnitOfWork(serviceProvider));
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>());
+            app.Services.Builder<OrderContext>("Ordering")
+                .UseDefaultSwaggerOptions();
+            app.Services.AddTransient<IEntityFrameworkCoreDatabaseBuilder, DatabaseBuilder>();
             app.Services.AddTransient(serviceProvider => new OrderContext(serviceProvider.GetService<IEntityFrameworkCoreDatabaseBuilder>()));
-            app.Services.AddTransient<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder(serviceProvider.GetService<IConfiguration>()));
-            StartUpExtensions.AddAuthentication("RootAddresses:Authentication");
-            StartUpExtensions.AddWhiteLabel("Ordering", "RootAddresses:WhiteLabel");
             return app;
         }
     }

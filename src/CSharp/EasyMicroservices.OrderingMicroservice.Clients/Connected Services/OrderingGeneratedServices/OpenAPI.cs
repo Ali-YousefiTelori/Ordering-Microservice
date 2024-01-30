@@ -6258,29 +6258,14 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class CreateProductRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
-        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
         private long? _countingUnitId;
         private System.Collections.Generic.ICollection<ProductPriceContract> _prices;
         private string _uniqueIdentity;
         private long? _parentId;
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
-
-        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ExternalServiceIdentifier
-        {
-            get { return _externalServiceIdentifier; }
-
-            set
-            {
-                if (_externalServiceIdentifier != value)
-                {
-                    _externalServiceIdentifier = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
 
         [Newtonsoft.Json.JsonProperty("names", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<LanguageDataContract> Names
@@ -6367,6 +6352,21 @@ namespace Ordering.GeneratedServices
                 if (_parentId != value)
                 {
                     _parentId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
+        {
+            get { return _externalServiceIdentifier; }
+
+            set
+            {
+                if (_externalServiceIdentifier != value)
+                {
+                    _externalServiceIdentifier = value;
                     RaisePropertyChanged();
                 }
             }
@@ -10232,30 +10232,15 @@ namespace Ordering.GeneratedServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.3.0))")]
     public partial class UpdateProductRequestContract : System.ComponentModel.INotifyPropertyChanged
     {
-        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<LanguageDataContract> _names;
         private System.Collections.Generic.ICollection<LanguageDataContract> _descriptions;
         private long? _countingUnitId;
         private System.Collections.Generic.ICollection<ProductPriceContract> _prices;
         private string _uniqueIdentity;
         private long? _parentId;
+        private string _externalServiceIdentifier;
         private System.Collections.Generic.ICollection<CreateProductRequestContract> _children;
         private long _id;
-
-        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ExternalServiceIdentifier
-        {
-            get { return _externalServiceIdentifier; }
-
-            set
-            {
-                if (_externalServiceIdentifier != value)
-                {
-                    _externalServiceIdentifier = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
 
         [Newtonsoft.Json.JsonProperty("names", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<LanguageDataContract> Names
@@ -10342,6 +10327,21 @@ namespace Ordering.GeneratedServices
                 if (_parentId != value)
                 {
                     _parentId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonProperty("externalServiceIdentifier", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ExternalServiceIdentifier
+        {
+            get { return _externalServiceIdentifier; }
+
+            set
+            {
+                if (_externalServiceIdentifier != value)
+                {
+                    _externalServiceIdentifier = value;
                     RaisePropertyChanged();
                 }
             }
