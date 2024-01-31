@@ -13,7 +13,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.15" />
   </ItemGroup>
   
   <ItemGroup>
@@ -21,7 +21,8 @@
   </ItemGroup>
   
 	<ItemGroup>
-		<Content Update="appsettings.json" CopyToPublishDirectory="Never" />
+    <Content Update="web.config" CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.json" CopyToPublishDirectory="Never" />
 		<Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
 		<Content Update="appsettings.$(MSBuildThisFileName).json" CopyToPublishDirectory="PreserveNewest" />
 	</ItemGroup>
